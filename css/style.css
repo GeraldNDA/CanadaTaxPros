@@ -1,0 +1,335 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*no copying this is Gerald property*/
+/*Home Page*/
+body
+{
+    width:auto;
+    height: 100%;
+    background: #85B602  url('http://s20.postimg.org/w4qpz2065/background_4.jpg') repeat-x fixed;
+}
+.content
+{
+    padding: 5%;
+}
+/*head*/
+#head
+{
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #ccc;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+#logo
+{
+	margin: 1%;
+	height: auto;
+	width: 10%;
+	float: left;
+}
+#name
+{
+    font-size: 5em;
+    padding-top: 1%;
+	margin-left: 13%;
+}
+#slogan
+{
+    margin-left: 15%;
+	padding-bottom: 1%;
+	margin: left;
+} 
+#head > * {
+  display: inline-block;
+  height: 100%;
+}
+#title
+{
+    display: block;
+    height: inherit;
+    min-height: inherit;
+    width: auto;
+    
+}
+
+#dir 
+{
+    height: inherit;
+    background-color: #ccc;
+    width: 100%;
+    border-bottom: 2px solid white;
+
+}
+#dir > a
+{
+    display: inline-block;
+    height: inherit;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Raleway", sans-serif;
+	font-weight: 600;
+    color: black;
+    vertical-align: middle;
+    line-height: 200%;
+    width: 32.5%;
+    margin-left: 0.25%;
+}
+/*body*/
+#body
+{
+    position: relative;
+    width: 100%;
+}
+#self
+{
+    display: inline-block;
+    width: 49%;
+    height:auto;
+	width: 45%;
+    vertical-align: middle;
+	
+    margin-bottom: 5%;
+    margin-top: 3%;
+	/*matte border*/
+	background-color: white;
+	border: 10px  solid white;
+	box-shadow: -10px  10px 20px ;
+}
+#intro
+{
+    margin-left: 1.5%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    width: 49%;
+    line-height: 175%;
+    vertical-align: middle;
+    color: white;   
+    font-family: "Raleway", Geneva, sans-serif;
+	font-weight: 600;
+    text-align: justify; 
+    display: inline-block;
+}
+/*footer*/
+#click
+{
+    border-top: 2px solid white ;
+    padding: 0;
+}
+#click a
+{
+    display: inline-block;
+    width: 32.35%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-family: "Raleway", Tahoma, Geneva, sans-serif;
+	font-weight: 600;
+    margin: 0 0.25%;
+}
+.titl
+{
+    color: #ddd;
+    font-size: 1.3em;
+}
+/*link BGs*/
+#home:hover
+{
+    background-color: #F85455;
+    color: white;
+}
+#about:hover
+{
+    background-color: #11B79F;
+    color: white;
+}
+#contact:hover
+{
+    background-color: #F5A94B;
+    color: white;
+}
+#qual:hover
+{
+    background-color: #9D5FAA;
+}
+#hilite:hover
+{
+    background-color: #BFB930;
+}
+/*MEDIA QUERY*/
+@media only screen and (max-width : 1020px) {
+/*Header*/
+#logo
+{
+	margin: 1% 25%;
+	height: auto;
+	width: 50%;
+	float: none;
+	text-align: center;
+}
+#name
+{
+	text-align: center;
+	margin-left: auto;
+}
+#slogan
+{
+    margin-left: 2em;
+	padding-bottom: 1%;
+	text-align: center;
+}
+/*Body*/
+#self
+{
+  display: block;
+  width: 100%;
+}
+#intro
+{
+    dispay: block;
+    width: 100%;
+}
+#click a
+{
+    display: block;
+    width: 100%;  
+}
+#dir > a
+{
+  display: block;
+  width: 100%;
+}
+}
+/*404*/
+#for h1
+{
+	margin-top: .25em;
+	color: white;
+	font-family:  "Verdana", sans-serif;
+	font-weight: 1000;
+	font-size:  8em;
+}
+#for h2
+{
+	color: white;
+	font-family:  "Verdana", sans-serif;
+	font-weight: 1000;
+	font-size:  2.5em;
+	margin-left: 3%;
+}
+#for p
+{
+	margin: 0 auto;
+    margin-top: 1.5%;
+    width: 95%;
+    line-height: 165%;
+    vertical-align: middle;
+    color: white;
+	font-size: 1.5em;
+    text-align: justify 
+    display: inline-block;
+}
+#for p a
+{
+	text-decoration: overline;
+	display: inline-block;
+	color: white;
+}
+/*contact*/
+#body
+{
+	color: white;
+	font-family: "Raleway", sans-serif;
+}
+#cinfo
+{
+	color: white;
+	font-size: 1.75em;
+	width:48%;
+	margin: 0 1%;
+	float: left;
+	font-family: "Raleway", sans-serif;
+}
+#body h1
+{
+	font-size: 3em;
+	font-family: "Ubuntu", sans-serif;
+	margin: .5em 0;
+	color: white;
+}
+
+#cinfo a:visited
+{
+	color: white;
+}
+#cinfo a
+{
+	text-decoration: none;
+	color: black;
+}
+#cmap        
+{
+display:block;
+width: 100%;
+}
+#cmap .ratio 
+{
+display:block;
+width:100%;
+height:auto;
+}
+#cmap iframe 
+{
+margin-top: 2em;
+width:100%;
+ height: 25em;
+}

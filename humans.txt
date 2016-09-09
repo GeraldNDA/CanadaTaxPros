@@ -1,0 +1,12 @@
+/* TEAM */
+	Web Developer and Designer:  Gerald Aryeetey
+	Email: aryeeteygerald@rogers.com
+	Location: Brampton, ON
+/* THANKS */
+	Cardboard Icons: http://www.iconsdb.com/icon-sets/cardboard-icons/
+	Favicon Elements: https://www.iconfinder.com/icons/106142/globe_icon#size=128
+/* SITE */
+	Last update: 2013/02/16
+	Language: English
+	Doctype:HTML5
+	IDE:  Notepad++,  GIMP
