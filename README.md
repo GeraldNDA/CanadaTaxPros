@@ -1,0 +1,2 @@
+# Canada Tax Pros Mockup Website
+This website is not live yet. Like most developppers our first website is for our mom. This is for my mom's tax business. I tried my best to be innovative but also fit the brand. This site went through 2 iterations. One that was a little older in web style (index_v0) and a more modern and innovative version. I left both there to show my process and improvement after a good friend of mine told me that the first one sucked. Check it out and feel free to email me about any thoughts you ahve about it.

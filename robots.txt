@@ -1,0 +1,16 @@
+# Remember, lines starting with # are comments and will be ignored
+User-agent: *
+
+Disallow: /cgi-bin/
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Google Image
+User-agent: Googlebot-Image
+Disallow:
+Allow: /*
+
+# Google AdSense
+User-agent: Mediapartners-Google*
+Disallow:
+Allow: /*

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Slabo+27px|Josefin+Sans:300|Molengo|Flamenco:400,300' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width">
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>TaxPro - Home</title>
+
+</head>
+<body>
+		<!--Design-->
+	<!--Home-->
+	<header id="home">
+			<div class="filter">
+					<div class="cta">
+							<h1>Do Your Taxes.</h1>
+							<h2>With a service you can trust and you can enjoy</h2>
+							<a href="#about" class=button>Learn More</a>
+					</div>
+			</div>
+	</header>
+	<!--Vertical left sticky menu-->
+	<nav>
+			<a href="#home">
+					<img src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_home_white_48dp.png" alt="Home" />
+					<span>Home</span>
+			</a>
+			<a href="#about">
+					<img src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_info_outline_white_48dp.png" alt="About" />
+					<span>About</span>
+			</a>
+			<a href="#contact">
+					<img src="https://raw.githubusercontent.com/google/material-design-icons/master/content/2x_web/ic_drafts_white_48dp.png" alt="Contact" />
+					<span>Contact</span>
+			</a>
+			<a href="#tips">
+					<img src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_done_white_48dp.png" alt="Free Tax Tips" />
+					<span>Tax Tips</span>
+			</a>
+	</nav>
+	<!--about-->
+	<section id=about>
+			<div class="ribbon">About</div>
+			<img src="" alt="" />
+			<section>
+					<h2>What We Do</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At assumenda non laboriosam architecto quia officia blanditiis earum voluptate, numquam tempore nobis et fugiat aut, debitis praesentium. Aut recusandae, vel itaque.</p>
+					<ul class="qual">
+							<li>Qualification 1</li>
+							<li>Qualification 2</li>
+							<li>Qualification 3</li>
+					</ul>
+					<h2>Why Choose Us</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius similique perspiciatis eligendi, quibusdam velit, itaque repellendus, ratione corporis maxime modi unde cumque! Ab, nisi assumenda animi consequatur non odit, omnis.</p>
+			</section>
+	</section>
+	<!--Contact-->
+	<section id="contact">
+			<div class="ribbon">Contact</div>
+			<section>
+					<div class="info">
+							<img src="https://storage.googleapis.com/material-icons/external-assets/v1/icons/svg/ic_phone_white_48px.svg" alt="" />
+							<div>
+									<h1>Phone</h1>
+									<h2>(905) 799 - 8378</h2>
+							</div>
+					</div>
+					<div class="info">
+							<img src="https://storage.googleapis.com/material-icons/external-assets/v1/icons/svg/ic_email_white_48px.svg" alt="" />
+							<div>
+									<h1>E-mail</h1>
+									<h2>aryeeteygeraldine@rogers.com</h2>
+							</div>
+					</div>
+					<div class="info">
+							<img src="http://s20.postimg.org/6tr62nazh/facebook_512.png" alt="" />
+							<div>
+									<h1>Facebook</h1>
+
+							</div>
+					</div>
+					<div class="info">
+							<img src="http://s20.postimg.org/jz6o8r4v1/linkedin_512.png" alt="" />
+							<div>
+									<h1>LinkedIn</h1>
+							</div>
+					</div>
+			</section>
+			<section>
+					<!--http://www.online-tech-tips.com/google-softwaretips/add-google-maps-driving-directions-to-your-website/-->
+					<!--No submit button ... .onchange() .submit() placeholder = "type your address tThen Press Enter"-->
+
+					<div class="map">
+							<iframe src="https://mapsengine.google.com/map/embed?mid=zFsaEP2dXofM.krcljogndSzs" width="640" height="480"></iframe>
+							<form  action="http://maps.google.com/maps" method="get" target="_blank">
+									<input type="text" placeholder="Your Address ... " name="saddr" />
+									<input type="hidden" name="daddr" value="22 Gulliver Crescent, Brampton, Ontario" />
+									<input type="submit" value="Get Directions" />
+							</form>
+					</div>
+					<form class="contact" action="">
+							<span class="filler">Hi, my</span>
+							<label for="name"> name </label><span class="filler">is </span>
+							<input id="name" type="text" placeholder="[ Your Name ]" />
+							<span class="filler">and you can </span>
+							<label for="email"> email </label><span class="filler">me back at</span>
+							<input id="email" type="email" placeholder="[ Your Email ]" />
+
+							<span class="filler">I'd just like to send you a </span>
+							<label for="message">message </label>
+							<span class="filler"> about ...</span>
+							<textarea rows="5" id="message" wrap="soft" placeholder="[ Any message ... ]"></textarea>
+							<input type="submit" value="Send">
+					</form>
+			</section>
+	</section>
+
+	<!--Tax Tips-->
+	<!--Flip Cards: http://www.codicode.com/art/3d_flipping_cards_pure_css3_card_flip_plugin.aspx-->
+	<section id=tips>
+			<div class="ribbon">
+					<!--select last of type and make shorter-->
+			</div>
+			<div class="ribbon end">Free Tax Tips
+					<!--horizantal, bottom of page ::before add triangle shape of ribbon-->
+			</div>
+			<section class="cardRow">
+					<div class="card">
+							<figure class="front">Free Tax Tip</figure>
+							<figure class="back">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur laborum magni optio at provident numquam debitis obcaecati, suscipit quis! Doloremque quis esse modi, odit, deleniti laudantium aliquid doloribus molestias! Quos.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo facere illum nemo sit saepe quam. Nam quaerat, laborum sunt earum totam commodi. Sit minima, iure possimus nostrum maiores. Recusandae, minus.</p>
+							</figure>
+					</div>
+					<div class="card">
+							<figure class="front">Free Tax Tip</figure>
+							<figure class="back">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et suscipit non rerum, impedit nihil consequuntur magni natus iusto veritatis, unde voluptatem debitis. Quam totam distinctio illo laborum consequatur, asperiores eos!</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem aut eum dolorum nulla aperiam minus quibusdam fugit consequatur. Rem excepturi reiciendis iusto necessitatibus, ipsum nam vero. Totam, minima, repudiandae!</p>
+							</figure>
+					</div>
+			</section>
+			<section class="cardRow">
+					<div class="card">
+							<figure class="front">Free Tax Tip</figure>
+							<figure class="back">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos esse velit iste tempora, vitae minima numquam consequuntur fugiat, explicabo error quidem asperiores, amet beatae ratione quaerat non quia placeat excepturi.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, ratione velit accusamus delectus molestiae ipsum dignissimos iste a impedit! Omnis cupiditate iure delectus atque porro ea molestias adipisci id sit!</p>
+							</figure>
+					</div>
+					<div class="card">
+							<figure class="front">Free Tax Tip</figure>
+							<figure class="back">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima labore debitis rem sit officiis accusamus asperiores quo, pariatur nesciunt consequuntur eaque esse iusto eius veniam, eos saepe reprehenderit quidem voluptate!</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur architecto explicabo iste, asperiores libero enim praesentium, ipsum perferendis illum, rerum quas id dolorum! Blanditiis nemo, quia. Ipsa ut saepe ad!</p>
+							</figure>
+					</div>
+			</section>
+	</section>
+</body>
+</html>
