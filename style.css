@@ -567,3 +567,14 @@ body > section {
 		border-radius: 0.5em;
 		overflow: hidden;
 }
+
+@media (max-width: 960px) {
+	.ribbon {
+		transform: rotate(0deg);
+		width: 120vw;
+		height: 7vh;
+		font-size: 5vh;
+		left: 0;
+		line-height: 7vh;
+	}
+}
