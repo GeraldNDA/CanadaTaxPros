@@ -571,10 +571,25 @@ body > section {
 @media (max-width: 960px) {
 	.ribbon {
 		transform: rotate(0deg);
-		width: 120vw;
+		width: 100vw;
 		height: 7vh;
 		font-size: 5vh;
-		left: 0;
 		line-height: 7vh;
+		position: initial;
 	}
+ /* @TODO: Fix background colors  */
+	#tips .ribbon:first-child  {
+		display: none;
+	}
+	#tips .ribbon {
+		transform: rotate(0deg);
+		width: 100vw;
+		height: 7vh;
+		font-size: 5vh;
+		line-height: 7vh;
+		position: initial;
+	}
+/* 	#about section,  #contact section, #tips section{
+		margin-left: 1vw;
+	} */
 }
