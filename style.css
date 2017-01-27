@@ -284,9 +284,9 @@ body > section {
 		background-position: center top;
 		background-size: cover;
 		visibiliity: hidden;
-		margin: 10vh 0;
+		margin-top: 10vh;
+	  margin-bottom: 10vh;
 		margin-right: 3vw;
-		margin-left: 13vw;
 }
 
 #about section {
@@ -346,7 +346,7 @@ body > section {
 }
 
 #contact section:first-of-type {
-		margin: 0 3vw 0 13vw;
+		margin-right: 3vw;
 		height: 100vh;
 		width: 30vw;
 }
@@ -398,7 +398,9 @@ body > section {
 		vertical-align: middle;
 		line-height: 14vh;
 }
-
+body > section .ribbon+*:not(.ribbon) {
+  margin-left: 13vw;	
+}
 #contact section {
 		vertical-align: middle;
 		display: inline-block;
@@ -440,26 +442,16 @@ body > section {
 		font-family: "Slabo 27px";
 		border-radius: 1em;
 		overflow: visible;
+		padding-bottom: 2em;
 }
-
-#contact::after {
-		display: block;
-		z-index: 1;
-		position: relative;
-		left: calc(94vw + 1em);
-		bottom: 40vh;
-		content: "";
-		border: 10px solid transparent;
-		border-left: 17.2px solid white;
-}
-
 .contact input, .contact textarea {
 		background: none;
 		border: none;
 		color: #2980b9;
 		font-family: "Slabo 27px";
 		outline: none;
-		 padding: 3px 7px;
+		padding: 3px 7px;
+	  font-size: inherit;
 }
 .contact textarea
 {
@@ -469,6 +461,7 @@ body > section {
 	width: 100%;
 	overflow: auto;
 	resize: none;
+	font-size: inherit;
 }
 .contact input:focus
 {
@@ -572,14 +565,30 @@ body > section {
 	.filter{
 		white-space: normal;
 	}
-	
+	.cta {
+		padding:0 2em;
+	} 
 	.ribbon {
 		transform: rotate(0deg);
 		width: 100vw;
-		height: 7vh;
-		font-size: 5vh;
-		line-height: 7vh;
+		height: initial;
+		font-size: 7vh;
+		line-height: 9vh;
 		position: initial;
+		margin-top: 1em;
+		
+	}
+	
+	#about .ribbon {
+		background: #c0392b;
+	}
+
+	#contact .ribbon {
+			background: #3498db;
+	}
+
+	#tips .ribbon {
+			background: #8e44ad;
 	}
  /* @TODO: Fix background colors  */
 	#tips .ribbon:first-child  {
@@ -588,12 +597,72 @@ body > section {
 	#tips .ribbon {
 		transform: rotate(0deg);
 		width: 100vw;
-		height: 7vh;
+		height: auto;
 		font-size: 5vh;
 		line-height: 7vh;
 		position: initial;
 	}
-/* 	#about section,  #contact section, #tips section{
-		margin-left: 1vw;
-	} */
+	
+	
+	body > section {
+		height: initial;
+		margin-bottom: 2em;
+	}
+	body > section .ribbon+*:not(.ribbon) {
+    margin-left: 5vw;	
+  }
+	#contact section {
+    width: 90vw;
+		margin: 0 5vw;
+  }
+	
+	#contact section:first-of-type {
+		margin: 0 5vw;
+		width: 90vw;
+		height: auto;
+  }
+	.map {
+		margin-top: 1em;
+		height: 100vh;
+	}
+	.contact {
+		height: auto;
+		font-size: 24px;
+	}
+	
+	
+	.cardRow {
+		margin-left: 5vw;
+	}
+	.card {
+		display: inline-block;
+		position: relative;
+		transform-style: preserve-3d;
+		height: 45vh;
+		width: 90vw;
+		line-height: 90vh;
+		perspective: 500px;
+ }
+	.card + .card {
+		margin-left: 0;
+		margin-top: 3vh;
+  }
 }
+/****************************\
+=========== TODO =============
+- Fix About Section Formatting
+- Change "What Choose us"
+  and "What We Do" to be icon
+  based
+- Make Photo Square and remove
+  all the rounded edges
+- Fix map (to be mobile scroll
+  friendly)
+- Fix Contact Form All Round
+- Make Contact LInks Work
+- Fix Nav Bar (Faster!)
+
+\****************************/
+
+
+
