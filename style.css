@@ -569,6 +569,10 @@ body > section {
 }
 
 @media (max-width: 960px) {
+	.filter{
+		white-space: normal;
+	}
+	
 	.ribbon {
 		transform: rotate(0deg);
 		width: 100vw;
