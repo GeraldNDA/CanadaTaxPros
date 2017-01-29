@@ -359,6 +359,7 @@ body > section {
 		vertical-align: middle;
 		line-height: 20vh;
 		margin: 1em auto;
+		color: inherit;
 }
 
 .info:first-of-type {
@@ -452,6 +453,8 @@ body > section .ribbon+*:not(.ribbon) {
 		outline: none;
 		padding: 3px 7px;
 	  font-size: inherit;
+		border-bottom: 2px solid #2980b9;
+		width: 100%;
 }
 .contact textarea
 {
@@ -498,6 +501,8 @@ body > section .ribbon+*:not(.ribbon) {
 		padding: 0.5em;
 		border-radius: 10%;
 		float: right;
+		width: auto;
+		border: none;
 }
 
 .contact input[type="submit"]:hover {
@@ -553,7 +558,8 @@ body > section .ribbon+*:not(.ribbon) {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		transition: all 0.5s ease-in;
+		transition: all 0.5s ease-in,
+			          z-index 0.3s step-end;
 		color: white;
 		backface-visibility: hidden;
 		background-color: #9b59b6;
@@ -611,6 +617,30 @@ body > section .ribbon+*:not(.ribbon) {
 	body > section .ribbon+*:not(.ribbon) {
     margin-left: 5vw;	
   }
+	#about > *:not(.ribbon) {
+		display: block;
+		margin-left: 5vw;
+  }
+
+#about img {
+		display: inline-block;
+		height: 80vh;
+		width: 90vw;
+		background-image: url("http://s20.postimg.org/rs5yluvkt/010.jpg");
+		background-position: center top;
+		background-size: cover;
+}
+
+#about section {
+		width: 90vw;
+		margin-right: 3vw;
+}
+
+#about section p {
+		text-indent: 1.5em;
+		text-align: justify;
+		line-height: 1.5;
+}
 	#contact section {
     width: 90vw;
 		margin: 0 5vw;
