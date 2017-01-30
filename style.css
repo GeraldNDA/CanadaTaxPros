@@ -110,7 +110,6 @@ nav {
 		padding: 0;
 		transition: all 1s ease-in-out;
 		text-align: left;
-		background: rgba(0, 0, 0, 0.5);
 }
 
 nav:hover {
@@ -279,7 +278,6 @@ body > section {
 		display: inline-block;
 		height: 80vh;
 		width: 45vw;
-		border-radius: 50%;
 		background-image: url("http://s20.postimg.org/rs5yluvkt/010.jpg");
 		background-position: center top;
 		background-size: cover;
@@ -375,11 +373,11 @@ body > section {
 }
 
 .info div {
-		width: calc(100% - 21vh);
 		display: inline-block;
 		line-height: 1;
 		padding: 1em;
 		vertical-align: middle;
+		width: calc(100% - 22.5vh);
 }
 
 .info h1,
@@ -413,7 +411,7 @@ body > section .ribbon+*:not(.ribbon) {
 .map,
 .map iframe {
 		width: 100%;
-		height: calc(100% - 2em);
+		height: calc(100% - 1em);
 }
 
 .map {
@@ -422,13 +420,17 @@ body > section .ribbon+*:not(.ribbon) {
 }
 
 .map form {
-		margin-top: -2em;
+		margin-top: -2.8em;
 		padding: 0.15em;
 		background: rgba(52, 152, 219, 0.5);
+	  
 		position: relative;
 		z-index: 2;
 		float: right;
-		
+}
+
+.map form * {
+	height: 2.5em;
 }
 
 .contact {
@@ -441,9 +443,9 @@ body > section .ribbon+*:not(.ribbon) {
 		background: rgba(255, 255, 255, 1);
 		color: black;
 		font-family: "Slabo 27px";
-		border-radius: 1em;
 		overflow: visible;
 		padding-bottom: 2em;
+		overflow-y: scroll;
 }
 .contact input, .contact textarea {
 		background: none;
@@ -454,13 +456,12 @@ body > section .ribbon+*:not(.ribbon) {
 		padding: 3px 7px;
 	  font-size: inherit;
 		border-bottom: 2px solid #2980b9;
-		width: 100%;
+		width: 50%;
 }
 .contact textarea
 {
 	margin-top: 0.5em;
 	border: 1px solid #2980b9;
-	border-radius: 1em;
 	width: 100%;
 	overflow: auto;
 	resize: none;
@@ -499,7 +500,6 @@ body > section .ribbon+*:not(.ribbon) {
 		color: #2980b9;
 		font-weight: 800;
 		padding: 0.5em;
-		border-radius: 10%;
 		float: right;
 		width: auto;
 		border: none;
@@ -567,7 +567,7 @@ body > section .ribbon+*:not(.ribbon) {
 		overflow: hidden;
 }
 
-@media (max-width: 960px) {
+@media only screen and (max-width: 960px), (max-height: 556px) {
 	.filter{
 		white-space: normal;
 	}
@@ -689,8 +689,8 @@ body > section .ribbon+*:not(.ribbon) {
 - Fix map (to be mobile scroll
   friendly)
 - Fix Contact Form All Round
-- Make Contact LInks Work
 - Fix Nav Bar (Faster!)
+- Fix Site on Landscape Mobile
 
 \****************************/
 
