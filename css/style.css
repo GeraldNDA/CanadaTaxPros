@@ -1,191 +1,191 @@
 body {
-		font-size: 16px;
-		overflow-x: hidden;
-		color: white;
-		background: black;
+    font-size: 16px;
+    overflow-x: hidden;
+    color: white;
+    background: black;
 }
 
 *,
 *:before,
 *:after {
-		box-sizing: border-box;
+    box-sizing: border-box;
 }
 /*fonts*/
 
 h1 {
-		font-size: 5em;
-		font-family: Molengo, sans-serif;
+    font-size: 5em;
+    font-family: Molengo, sans-serif;
 }
 
 h2 {
-		font-size: 2em;
-		font-family: Flamenco, serif;
-		font-weight: 400;
+    font-size: 2em;
+    font-family: Flamenco, serif;
+    font-weight: 400;
 }
 
 p {
-		font-family: "Slabo 27px";
-		margin: 0 0 0.75em 0;
+    font-family: "Slabo 27px";
+    margin: 0 0 0.75em 0;
 }
 
 a {
-		text-decoration: none;
-		vertical-align: middle;
+    text-decoration: none;
+    vertical-align: middle;
 }
 /*home*/
 
 header,
 header * {
-		padding: 0;
-		border: initial;
+    padding: 0;
+    border: initial;
 }
 
 header {
-		height: 95vh;
-		width: 100vw;
-		background: #000000 url("https://unsplash.imgix.net/19/clock.JPG?q=75&fm=jpg&s=c424614ae83cef32017167031925460d") no-repeat top;
-		overflow: hidden;
+    height: 95vh;
+    width: 100vw;
+    background: #000000 url("https://unsplash.imgix.net/19/clock.JPG?q=75&fm=jpg&s=c424614ae83cef32017167031925460d") no-repeat top;
+    overflow: hidden;
 }
 
 .filter {
-		height: 100%;
-		background: rgba(22, 160, 133, 0.8);
-		text-align: center;
-		white-space: nowrap;
+    height: 100%;
+    background: rgba(22, 160, 133, 0.8);
+    text-align: center;
+    white-space: nowrap;
 }
 
 .filter:before {
-		content: '';
-		display: inline-block;
-		height: 100%;
-		vertical-align: middle;
-		margin-right: -0.25em;
-		/* Adjusts for spacing */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+    /* Adjusts for spacing */
 }
 
 .cta {
-		display: inline-block;
-		vertical-align: middle;
-		color: white;
-		width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    width: 100%;
 }
 
 .cta .button {
-		font-family: Molengo, sans-serif;
-		display: inline-block;
-		color: inherit;
-		background: none;
-		font-size: 1em;
-		border-radius: 5px;
-		border: 0.15rem solid white;
-		padding: 3vh;
-		-webkit-border-radius: 10px;
-		-moz-border-radius: 10px;
-		border-radius: 10px;
-		transition: all 0.25s ease-in-out;
+    font-family: Molengo, sans-serif;
+    display: inline-block;
+    color: inherit;
+    background: none;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 0.15rem solid white;
+    padding: 3vh;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    transition: all 0.25s ease-in-out;
 }
 
 .button:hover {
-		background: white;
-		color: #16a085;
-		transition: all 0.25s ease-in-out;
+    background: white;
+    color: #16a085;
+    transition: all 0.25s ease-in-out;
 }
 
 .cta * + * {
-		margin-top: 0.5rem;
+    margin-top: 0.5rem;
 }
 /*sticky menu*/
 
 nav,
 nav * {
-		border: none;
-		padding: 0;
+    border: none;
+    padding: 0;
 }
 
 nav {
-		position: fixed;
-		z-index: 3;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		padding: 0;
-		transition: all 1s ease-in-out;
-		text-align: left;
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    transition: all 1s ease-in-out;
+    text-align: left;
 }
 
 nav:hover {
-		background: transparent;
+    background: transparent;
 }
 
 nav a {
-		display: block;
-		width: 44px;
-		height: 36px;
-		padding-left: 8px;
-		/*http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/*/
-		
-		overflow: hidden;
-		transition: all 1s ease-in-out;
-		background: transparent;
+    display: block;
+    width: 44px;
+    height: 36px;
+    padding-left: 8px;
+    /*http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/*/
+    
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    background: transparent;
 }
 
 nav a * {
-		vertical-align: middle;
+    vertical-align: middle;
 }
 
 nav a img {
-		position: absolute;
-		right: 0;
-		width: 36px;
-		height: 36px;
-		margin: 0;
-		margin-right: 4px;
-		z-index: 100;
+    position: absolute;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    margin-right: 4px;
+    z-index: 100;
 }
 
 nav a span {
-		text-align: center;
-		width: 64px;
-		line-height: 36px;
-		font-weight: 400;
-		font-family: Flamenco, sans-serif;
-		font-size: 1em;
-		color: white;
-		opacity: 0;
-		white-space: nowrap;
-		position: absolute;
-		margin-left: 8px;
-		transform: translateX(64px);
-		transition: all 1s ease-in-out;
+    text-align: center;
+    width: 64px;
+    line-height: 36px;
+    font-weight: 400;
+    font-family: Flamenco, sans-serif;
+    font-size: 1em;
+    color: white;
+    opacity: 0;
+    white-space: nowrap;
+    position: absolute;
+    margin-left: 8px;
+    transform: translateX(64px);
+    transition: all 1s ease-in-out;
 }
 
 nav a:hover {
-		width: 126px;
+    width: 126px;
 }
 
 nav a:nth-child(1):hover {
-		background: #16a085;
+    background: #16a085;
 }
 
 nav a:nth-child(2):hover {
-		background: #c0392b;
+    background: #c0392b;
 }
 
 nav a:nth-child(3):hover {
-		background: #2980b9;
+    background: #2980b9;
 }
 
 nav a:nth-child(4):hover {
-		background: #8e44ad;
+    background: #8e44ad;
 }
 
 nav a:hover span {
-		opacity: 1;
-		transition: all 1s ease-in-out;
-		-webkit-transition-delay: 0.1s;
-		transition-delay: 0.5s;
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.5s;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
 }
 /*****************************\
 ribbon styles
@@ -193,502 +193,503 @@ http://codepen.io/anon/pen/GJjZwR
 \*****************************/
 
 body > section {
-		height: 100vh;
-		position: relative;
-		overflow: hidden;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 /**Ribbon**/
 
 #about .ribbon {
-		background: #c0392b;
-		background-image: linear-gradient(to right, #c0392b 0%, #c0392b 85%, #3498db 100%);
+    background: #c0392b;
+    background-image: linear-gradient(to right, #c0392b 0%, #c0392b 85%, #3498db 100%);
 }
 
 #contact .ribbon {
-		background: #3498db;
-		background-image: linear-gradient(to right, #3498db 0%, #3498db 80%, #8e44ad 100%);
+    background: #3498db;
+    background-image: linear-gradient(to right, #3498db 0%, #3498db 80%, #8e44ad 100%);
 }
 
 #tips .ribbon {
-		background: #8e44ad;
-		color: #8e44ad;
+    background: #8e44ad;
+    color: #8e44ad;
 }
 
 .ribbon {
-		width: 100vh;
-		background: rgb(22, 160, 133);
-		height: 7em;
-		height: 7vw;
-		position: absolute;
-		left: 10em;
-		left: 10vw;
-		-moz-transform: rotate(90deg);
-		transform: rotate(90deg);
-		-moz-transform-origin: 0% 0%;
-		transform-origin: top left;
-		/*ribbon end/beginning styles:
-    http://meyerweb.com/eric/tools/color-blend/
-  */
-		
-		line-height: 7vw;
-		vertical-align: middle;
-		text-align: center;
-		color: white;
-		font-size: 5em;
-		font-size: 5vw;
-		text-transform: uppercase;
-		letter-spacing: 0.5em;
-		font-family: 'Josefin Sans', cursive;
-		font-weight: 300;
+    width: 100vh;
+    background: rgb(22, 160, 133);
+    height: 7em;
+    height: 7vw;
+    position: absolute;
+    left: 10em;
+    left: 10vw;
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -moz-transform-origin: 0% 0%;
+    transform-origin: top left;
+    /*ribbon end/beginning styles:
+http://meyerweb.com/eric/tools/color-blend/
+*/
+    
+    line-height: 7vw;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    font-size: 5vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-family: 'Josefin Sans', cursive;
+    font-weight: 300;
 }
 
 #tips .ribbon:first-child {
-		width: 90vh;
+    width: 90vh;
 }
 
 #tips .ribbon:first-child::after {
-		content: "";
-		margin-left: 90vh;
-		display: block;
-		border-bottom: 7vw solid transparent;
-		border-left: 7vh solid currentColor;
+    content: "";
+    margin-left: 90vh;
+    display: block;
+    border-bottom: 7vw solid transparent;
+    border-left: 7vh solid currentColor;
 }
 
 .ribbon.end {
-		height: 7em;
-		height: 7vh;
-		width: 90vw;
-		position: absolute;
-		bottom: 3em;
-		bottom: 3vh;
-		line-height: 7vh;
-		font-size: 5em;
-		font-size: 5vh;
-		-moz-transform: rotate(0deg);
-		transform: rotate(0deg);
-		color: white !important;
-		background-color: #793A93 !important;
+    height: 7em;
+    height: 7vh;
+    width: 90vw;
+    position: absolute;
+    bottom: 3em;
+    bottom: 3vh;
+    line-height: 7vh;
+    font-size: 5em;
+    font-size: 5vh;
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+    color: white !important;
+    background-color: #793A93 !important;
 }
 
 #about > *:not(.ribbon) {
-		display: inline-block;
-		vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #about img {
-		display: inline-block;
-		height: 80vh;
-		width: 45vw;
-		background-image: url("http://s20.postimg.org/rs5yluvkt/010.jpg");
-		background-position: center top;
-		background-size: cover;
-		visibiliity: hidden;
-		margin-top: 10vh;
-	  margin-bottom: 10vh;
-		margin-right: 3vw;
+    display: inline-block;
+    height: 80vh;
+    width: 45vw;
+    background-image: url("http://s20.postimg.org/rs5yluvkt/010.jpg");
+    background-position: center top;
+    background-size: cover;
+    visibiliity: hidden;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-right: 3vw;
+    object-fit: cover;
 }
 
 #about section {
-		display: inline-block;
-		width: 30vw;
-		margin-right: 3vw;
+    display: inline-block;
+    width: 30vw;
+    margin-right: 3vw;
 }
 
 #about section p {
-		text-indent: 1.5em;
-		text-align: left;
-		line-height: 1.5;
+    text-indent: 1.5em;
+    text-align: left;
+    line-height: 1.5;
 }
 
 .qual {
-		margin: 1em 0;
+    margin: 1em 0;
 }
 
 .qual li {
-		background: #c0392b;
-		padding: 1em;
-		padding-left: 1.5em;
-		border-radius: 0.25em;
-		color: white;
+    background: #c0392b;
+    padding: 1em;
+    padding-left: 1.5em;
+    border-radius: 0.25em;
+    color: white;
 }
 
 .qual li+li {
-		margin-top: 0.5em;
+    margin-top: 0.5em;
 }
 
 .ribbon {
-		width: 100vh;
-		background: #3498db;
-		height: 7em;
-		height: 7vw;
-		position: absolute;
-		left: 10em;
-		left: 10vw;
-		-moz-transform: rotate(90deg);
-		transform: rotate(90deg);
-		-moz-transform-origin: 0% 0%;
-		transform-origin: top left;
-		/*ribbon end/beginning styles:
-    http://meyerweb.com/eric/tools/color-blend/
-  */
-		
-		line-height: 7vw;
-		vertical-align: middle;
-		text-align: center;
-		color: white;
-		font-size: 5em;
-		font-size: 5vw;
-		text-transform: uppercase;
-		letter-spacing: 0.5em;
-		font-family: 'Josefin Sans', cursive;
-		font-weight: 300;
+    width: 100vh;
+    background: #3498db;
+    height: 7em;
+    height: 7vw;
+    position: absolute;
+    left: 10em;
+    left: 10vw;
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -moz-transform-origin: 0% 0%;
+    transform-origin: top left;
+    /*ribbon end/beginning styles:
+http://meyerweb.com/eric/tools/color-blend/
+*/
+    
+    line-height: 7vw;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    font-size: 5vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-family: 'Josefin Sans', cursive;
+    font-weight: 300;
 }
 
 #contact section:first-of-type {
-		margin-right: 3vw;
-		height: 100vh;
-		width: 30vw;
+    margin-right: 3vw;
+    height: 100vh;
+    width: 30vw;
 }
 
 .info {
-		width: 100%;
-		display: block;
-		background: #2980b9;
-		height: 20vh;
-		vertical-align: middle;
-		line-height: 20vh;
-		margin: 1em auto;
-		color: inherit;
+    width: 100%;
+    display: block;
+    background: #2980b9;
+    height: 20vh;
+    vertical-align: middle;
+    line-height: 20vh;
+    margin: 1em auto;
+    color: inherit;
 }
 
 .info:first-of-type {
-		margin-top: calc((100vh - (80vh + 3em))/2);
+    margin-top: calc((100vh - (80vh + 3em))/2);
 }
 
 .info img {
-		padding: 1em;
-		background: #3498db;
-		height: 100%;
-		vertical-align: top;
-		display: inline-block;
+    padding: 1em;
+    background: #3498db;
+    height: 100%;
+    vertical-align: top;
+    display: inline-block;
 }
 
 .info div {
-		display: inline-block;
-		line-height: 1;
-		padding: 1em;
-		vertical-align: middle;
-		width: calc(100% - 22.5vh);
+    display: inline-block;
+    line-height: 1;
+    padding: 1em;
+    vertical-align: middle;
+    width: calc(100% - 22.5vh);
 }
 
 .info h1,
 .info h2 {
-		width: 100%;
-		vertical-align: middle;
-		font-size: 2.5vh;
-		word-wrap: break-word;
+    width: 100%;
+    vertical-align: middle;
+    font-size: 2.5vh;
+    word-wrap: break-word;
 }
 
 .info h1 {
-		font-size: 5vh;
+    font-size: 5vh;
 }
 
 .info h1:only-child {
-		margin: 0;
-		vertical-align: middle;
-		line-height: 14vh;
+    margin: 0;
+    vertical-align: middle;
+    line-height: 14vh;
 }
 body > section .ribbon+*:not(.ribbon) {
-  margin-left: 13vw;	
+margin-left: 13vw;	
 }
 #contact section {
-		vertical-align: middle;
-		display: inline-block;
-		width: 50vw;
-		overflow: hidden;
-		height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    width: 50vw;
+    overflow: hidden;
+    height: 100%;
 }
 
 .map,
 .map iframe {
-		width: 100%;
-		height: calc(100% - 1em);
+    width: 100%;
+    height: calc(100% - 1em);
 }
 
 .map {
-		margin-top: 3em;
-		height: calc(50% - 1em);
+    margin-top: 3em;
+    height: calc(50% - 1em);
 }
 
 .map form {
-		margin-top: -2.8em;
-		padding: 0.15em;
-		background: rgba(52, 152, 219, 0.5);
-	  
-		position: relative;
-		z-index: 2;
-		float: right;
+    margin-top: -2.8em;
+    padding: 0.15em;
+    background: rgba(52, 152, 219, 0.5);
+    
+    position: relative;
+    z-index: 2;
+    float: right;
 }
 
 .map form * {
-	height: 2.5em;
+height: 2.5em;
 }
 
 .contact {
-		height: 39vh;
-		z-index: 2;
-		vertical-align: middle;
-		font-size: 1.25em;
-		line-height: 1.5;
-		padding: 1.5em;
-		background: rgba(255, 255, 255, 1);
-		color: black;
-		font-family: "Slabo 27px";
-		overflow: visible;
-		padding-bottom: 2em;
-		overflow-y: scroll;
+    height: 39vh;
+    z-index: 2;
+    vertical-align: middle;
+    font-size: 1.25em;
+    line-height: 1.5;
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 1);
+    color: black;
+    font-family: "Slabo 27px";
+    overflow: visible;
+    padding-bottom: 2em;
+    overflow-y: scroll;
 }
 .contact input, .contact textarea {
-		background: none;
-		border: none;
-		color: #2980b9;
-		font-family: "Slabo 27px";
-		outline: none;
-		padding: 3px 7px;
-	  font-size: inherit;
-		border-bottom: 2px solid #2980b9;
-		width: 50%;
+    background: none;
+    border: none;
+    color: #2980b9;
+    font-family: "Slabo 27px";
+    outline: none;
+    padding: 3px 7px;
+    font-size: inherit;
+    border-bottom: 2px solid #2980b9;
+    width: 50%;
 }
 .contact textarea
 {
-	margin-top: 0.5em;
-	border: 1px solid #2980b9;
-	width: 100%;
-	overflow: auto;
-	resize: none;
-	font-size: inherit;
+margin-top: 0.5em;
+border: 1px solid #2980b9;
+width: 100%;
+overflow: auto;
+resize: none;
+font-size: inherit;
 }
 .contact input:focus
 {
-	background-color: #2980b9;
-	color: white;
-	
+background-color: #2980b9;
+color: white;
+
 }
 
 .contact input:focus::-moz-placeholder
- {
-		color: white;
-		opacity: 1;
+{
+    color: white;
+    opacity: 1;
 }
 
-.contact input::-moz-placeholder,
- {
-		text-align: center;
-		opacity: 1;
-		font-family: "Slabo 27px";
-		font-weight: 400;
-		color: #2980b9;
+.contact input::-moz-placeholder
+{
+    text-align: center;
+    opacity: 1;
+    font-family: "Slabo 27px";
+    font-weight: 400;
+    color: #2980b9;
 }
 .contact textarea::-moz-placeholder
 {
-		opacity: 1;
-		font-family: "Slabo 27px";
-		font-weight: 600;
-		color: #2980b9;
+    opacity: 1;
+    font-family: "Slabo 27px";
+    font-weight: 600;
+    color: #2980b9;
 }
 
 .contact input[type="submit"] {
-		color: #2980b9;
-		font-weight: 800;
-		padding: 0.5em;
-		float: right;
-		width: auto;
-		border: none;
+    color: #2980b9;
+    font-weight: 800;
+    padding: 0.5em;
+    float: right;
+    width: auto;
+    border: none;
 }
 
 .contact input[type="submit"]:hover {
-		color: white;
-		background: #2980b9;
+    color: white;
+    background: #2980b9;
 }
 
 .cardRow {
-		margin-left: 13vw;
-		margin-top: 3vh;
+    margin-left: 13vw;
+    margin-top: 3vh;
 }
 
 .card + .card {
-		margin-left: 3vw;
+    margin-left: 3vw;
 }
 
 .card {
-		display: inline-block;
-		position: relative;
-		transform-style: preserve-3d;
-		height: 40.5vh;
-		width: 40.5vw;
-		perspective: 500px;
+    display: inline-block;
+    position: relative;
+    transform-style: preserve-3d;
+    height: 40.5vh;
+    width: 40.5vw;
+    perspective: 500px;
 }
 
 .card .front {
-		z-index: 2;
-		vertical-align: middle;
-		line-height: 40.5vh;
-		text-align: center;
-		font-size: 5vh;
-		font-family: Molengo;
+    z-index: 2;
+    vertical-align: middle;
+    line-height: 40.5vh;
+    text-align: center;
+    font-size: 5vh;
+    font-family: Molengo;
 }
 
 .card .back {
-		z-index: 1;
-		line-height: 1.15;
-		transform: rotateY(180deg);
-		padding: 7.5%;
+    z-index: 1;
+    line-height: 1.15;
+    transform: rotateY(180deg);
+    padding: 7.5%;
 }
 
 .card:hover .front {
-		transform: rotateY(-180deg);
-		z-index: 0;
+    transform: rotateY(-180deg);
+    z-index: 0;
 }
 
 .card:hover .back {
-		transform: rotateY(0deg)
+    transform: rotateY(0deg)
 }
 
 .card .front,
 .card .back {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		transition: all 0.5s ease-in,
-			          z-index 0.3s step-end;
-		color: white;
-		backface-visibility: hidden;
-		background-color: #9b59b6;
-		border-radius: 0.5em;
-		overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in,
+                    z-index 0.3s step-end;
+    color: white;
+    backface-visibility: hidden;
+    background-color: #9b59b6;
+    border-radius: 0.5em;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 960px), (max-height: 556px) {
-	.filter{
-		white-space: normal;
-	}
-	.cta {
-		padding:0 2em;
-	} 
-	.ribbon {
-		transform: rotate(0deg);
-		width: 100vw;
-		height: initial;
-		font-size: 7vh;
-		line-height: 9vh;
-		position: initial;
-		margin-top: 1em;
-		
-	}
-	
-	#about .ribbon {
-		background: #c0392b;
-	}
+.filter{
+    white-space: normal;
+}
+.cta {
+    padding:0 2em;
+} 
+.ribbon {
+    transform: rotate(0deg);
+    width: 100vw;
+    height: initial;
+    font-size: 7vh;
+    line-height: 9vh;
+    position: initial;
+    margin-top: 1em;
+    
+}
 
-	#contact .ribbon {
-			background: #3498db;
-	}
+#about .ribbon {
+    background: #c0392b;
+}
 
-	#tips .ribbon {
-			background: #8e44ad;
-	}
- /* @TODO: Fix background colors  */
-	#tips .ribbon:first-child  {
-		display: none;
-	}
-	#tips .ribbon {
-		transform: rotate(0deg);
-		width: 100vw;
-		height: auto;
-		font-size: 5vh;
-		line-height: 7vh;
-		position: initial;
-	}
-	
-	
-	body > section {
-		height: initial;
-		margin-bottom: 2em;
-	}
-	body > section .ribbon+*:not(.ribbon) {
-    margin-left: 5vw;	
-  }
-	#about > *:not(.ribbon) {
-		display: block;
-		margin-left: 5vw;
-  }
+#contact .ribbon {
+        background: #3498db;
+}
+
+#tips .ribbon {
+        background: #8e44ad;
+}
+/* @TODO: Fix background colors  */
+#tips .ribbon:first-child  {
+    display: none;
+}
+#tips .ribbon {
+    transform: rotate(0deg);
+    width: 100vw;
+    height: auto;
+    font-size: 5vh;
+    line-height: 7vh;
+    position: initial;
+}
+
+
+body > section {
+    height: initial;
+    margin-bottom: 2em;
+}
+body > section .ribbon+*:not(.ribbon) {
+margin-left: 5vw;	
+}
+#about > *:not(.ribbon) {
+    display: block;
+    margin-left: 5vw;
+}
 
 #about img {
-		display: inline-block;
-		height: 80vh;
-		width: 90vw;
-		background-image: url("http://s20.postimg.org/rs5yluvkt/010.jpg");
-		background-position: center top;
-		background-size: cover;
+    display: inline-block;
+    height: 80vh;
+    width: 90vw;
+    background-image: url("http://s20.postimg.org/rs5yluvkt/010.jpg");
+    background-position: center top;
+    background-size: cover;
 }
 
 #about section {
-		width: 90vw;
-		margin-right: 3vw;
+    width: 90vw;
+    margin-right: 3vw;
 }
 
 #about section p {
-		text-indent: 1.5em;
-		text-align: left;
-		line-height: 1.5;
+    text-indent: 1.5em;
+    text-align: left;
+    line-height: 1.5;
 }
-	#contact section {
+#contact section {
+width: 90vw;
+    margin: 0 5vw;
+}
+
+#contact section:first-of-type {
+    margin: 0 5vw;
     width: 90vw;
-		margin: 0 5vw;
-  }
-	
-	#contact section:first-of-type {
-		margin: 0 5vw;
-		width: 90vw;
-		height: auto;
-  }
-	.map {
-		margin-top: 1em;
-		height: 100vh;
-	}
-	.contact {
-		height: auto;
-		font-size: 24px;
-	}
-	
-	
-	.cardRow {
-		margin-left: 5vw;
-	}
-	.card {
-		display: inline-block;
-		position: relative;
-		transform-style: preserve-3d;
-		height: 45vh;
-		width: 90vw;
-		line-height: 90vh;
-		perspective: 500px;
- }
-	.card + .card {
-		margin-left: 0;
-		margin-top: 3vh;
-  }
+    height: auto;
+}
+.map {
+    margin-top: 1em;
+    height: 100vh;
+}
+.contact {
+    height: auto;
+    font-size: 24px;
+}
+
+
+.cardRow {
+    margin-left: 5vw;
+}
+.card {
+    display: inline-block;
+    position: relative;
+    transform-style: preserve-3d;
+    height: 45vh;
+    width: 90vw;
+    line-height: 90vh;
+    perspective: 500px;
+}
+.card + .card {
+    margin-left: 0;
+    margin-top: 3vh;
+}
 }
 /****************************\
 =========== TODO =============
 - Fix About Section Formatting
 - Change "What Choose us"
-  and "What We Do" to be icon
-  based
+    and "What We Do" to be icon
+    based
 - Make Photo Square and remove
-  all the rounded edges
+    all the rounded edges
 - Fix map (to be mobile scroll
-  friendly)
+            friendly)
 - Fix Contact Form All Round
 - Fix Nav Bar (Faster!)
 - Fix Site on Landscape Mobile
