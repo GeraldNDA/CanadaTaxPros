@@ -113,23 +113,19 @@ nav {
     top: 50%;
     transform: translateY(-50%);
     padding: 0;
-    transition: all 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     text-align: left;
-}
-
-nav:hover {
-    background: transparent;
 }
 
 nav a {
     display: block;
-    width: 44px;
-    height: 36px;
-    padding-left: 8px;
+    width: 3rem;
+    height: 2.25rem;
+    padding-left: 0.5rem;
     /*http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/*/
     
     overflow: hidden;
-    transition: all 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: transparent;
 }
 
@@ -140,17 +136,17 @@ nav a * {
 nav a img {
     position: absolute;
     right: 0;
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     margin: 0;
-    margin-right: 4px;
+    margin-right: 0.25rem;
     z-index: 100;
 }
 
 nav a span {
     text-align: center;
-    width: 64px;
-    line-height: 36px;
+    width: 4rem;
+    line-height: 2.25rem;
     font-weight: 400;
     font-family: Flamenco, sans-serif;
     font-size: 1em;
@@ -158,39 +154,47 @@ nav a span {
     opacity: 0;
     white-space: nowrap;
     position: absolute;
-    margin-left: 8px;
-    transform: translateX(64px);
-    transition: all 1s ease-in-out;
+    margin-left: 0.5rem;
+    transform: translateX(4rem);
+    transition: all 0.3s ease-in-out;
 }
 
-nav a:hover {
-    width: 126px;
+@media (hover:hover) {
+    /* Navigation hover affects should not apply to mobile */
+    nav:hover {
+        background: transparent;
+    }
+
+    nav a:hover {
+        width: 8rem;
+    }
+    
+    nav a:nth-child(1):hover {
+        background: #16a085;
+    }
+    
+    nav a:nth-child(2):hover {
+        background: #c0392b;
+    }
+    
+    nav a:nth-child(3):hover {
+        background: #2980b9;
+    }
+    
+    nav a:nth-child(4):hover {
+        background: #8e44ad;
+    }
+    
+    nav a:hover span {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.15s;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }
 
-nav a:nth-child(1):hover {
-    background: #16a085;
-}
-
-nav a:nth-child(2):hover {
-    background: #c0392b;
-}
-
-nav a:nth-child(3):hover {
-    background: #2980b9;
-}
-
-nav a:nth-child(4):hover {
-    background: #8e44ad;
-}
-
-nav a:hover span {
-    opacity: 1;
-    transition: all 1s ease-in-out;
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.5s;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-}
 /*****************************\
 ribbon styles
 http://codepen.io/anon/pen/GJjZwR
@@ -283,14 +287,12 @@ http://meyerweb.com/eric/tools/color-blend/
     display: inline-block;
     height: 80vh;
     width: 45vw;
-    background-image: url("http://s20.postimg.org/rs5yluvkt/010.jpg");
-    background-position: center top;
-    background-size: cover;
-    visibiliity: hidden;
+    /* visibility: hidden; */
     margin-top: 10vh;
     margin-bottom: 10vh;
     margin-right: 3vw;
     object-fit: cover;
+    object-position: center top; 
 }
 
 #about section {
@@ -574,115 +576,116 @@ color: white;
 }
 
 @media only screen and (max-width: 960px), (max-height: 556px) {
-.filter{
-    white-space: normal;
-}
-.cta {
-    padding:0 2em;
-} 
-.ribbon {
-    transform: rotate(0deg);
-    width: 100vw;
-    height: initial;
-    font-size: 7vh;
-    line-height: 9vh;
-    position: initial;
-    margin-top: 1em;
-    
-}
+    .filter{
+        white-space: normal;
+    }
+    .cta {
+        padding:0 2em;
+    } 
+    .ribbon {
+        transform: rotate(0deg);
+        width: 100vw;
+        height: initial;
+        font-size: 7vh;
+        line-height: 9vh;
+        position: initial;
+        margin-top: 1em;
+        
+    }
 
-#about .ribbon {
-    background: #c0392b;
-}
+    #about .ribbon {
+        background: #c0392b;
+    }
 
-#contact .ribbon {
+    #contact .ribbon {
         background: #3498db;
-}
+    }
 
-#tips .ribbon {
+    #tips .ribbon {
         background: #8e44ad;
-}
-/* @TODO: Fix background colors  */
-#tips .ribbon:first-child  {
-    display: none;
-}
-#tips .ribbon {
-    transform: rotate(0deg);
-    width: 100vw;
-    height: auto;
-    font-size: 5vh;
-    line-height: 7vh;
-    position: initial;
-}
+    }
+
+    /* @TODO: Fix background colors  */
+    #tips .ribbon:first-child  {
+        display: none;
+    }
+    #tips .ribbon {
+        transform: rotate(0deg);
+        width: 100vw;
+        height: auto;
+        font-size: 5vh;
+        line-height: 7vh;
+        position: initial;
+    }
 
 
-body > section {
-    height: initial;
-    margin-bottom: 2em;
-}
-body > section .ribbon+*:not(.ribbon) {
-margin-left: 5vw;	
-}
-#about > *:not(.ribbon) {
-    display: block;
-    margin-left: 5vw;
-}
+    body > section {
+        height: initial;
+        margin-bottom: 2em;
+    }
+    body > section .ribbon+*:not(.ribbon) {
+        margin-left: 5vw;
+    }
 
-#about img {
-    display: inline-block;
-    height: 80vh;
+    #about > *:not(.ribbon) {
+        display: block;
+        margin-left: 5vw;
+    }
+
+    #about img {
+        display: inline-block;
+        height: 80vh;
+        width: 90vw;
+        object-position: center top;
+        object-fit: cover;
+    }
+
+    #about section {
+        width: 90vw;
+        margin-right: 3vw;
+    }
+
+    #about section p {
+        text-indent: 1.5em;
+        text-align: left;
+        line-height: 1.5;
+    }
+    #contact section {
     width: 90vw;
-    background-image: url("http://s20.postimg.org/rs5yluvkt/010.jpg");
-    background-position: center top;
-    background-size: cover;
-}
+        margin: 0 5vw;
+    }
 
-#about section {
-    width: 90vw;
-    margin-right: 3vw;
-}
-
-#about section p {
-    text-indent: 1.5em;
-    text-align: left;
-    line-height: 1.5;
-}
-#contact section {
-width: 90vw;
-    margin: 0 5vw;
-}
-
-#contact section:first-of-type {
-    margin: 0 5vw;
-    width: 90vw;
-    height: auto;
-}
-.map {
-    margin-top: 1em;
-    height: 100vh;
-}
-.contact {
-    height: auto;
-    font-size: 24px;
-}
+    #contact section:first-of-type {
+        margin: 0 5vw;
+        width: 90vw;
+        height: auto;
+    }
+    .map {
+        margin-top: 1em;
+        height: 100vh;
+    }
+    .contact {
+        height: auto;
+        font-size: 24px;
+    }
 
 
-.cardRow {
-    margin-left: 5vw;
-}
-.card {
-    display: inline-block;
-    position: relative;
-    transform-style: preserve-3d;
-    height: 45vh;
-    width: 90vw;
-    line-height: 90vh;
-    perspective: 500px;
-}
-.card + .card {
-    margin-left: 0;
-    margin-top: 3vh;
-}
+    .cardRow {
+        margin-left: 5vw;
+    }
+    .card {
+        display: inline-block;
+        position: relative;
+        transform-style: preserve-3d;
+        height: 45vh;
+        width: 90vw;
+        line-height: 90vh;
+        perspective: 500px;
+    }
+    .card + .card {
+        margin-left: 0;
+        margin-top: 3vh;
+    }
 }
 /****************************\
 =========== TODO =============
@@ -690,13 +693,9 @@ width: 90vw;
 - Change "What Choose us"
     and "What We Do" to be icon
     based
-- Make Photo Square and remove
-    all the rounded edges
 - Fix map (to be mobile scroll
             friendly)
 - Fix Contact Form All Round
-- Fix Nav Bar (Faster!)
-- Fix Site on Landscape Mobile
 
 \****************************/
 
