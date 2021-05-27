@@ -32,6 +32,10 @@ p {
     margin: 0 0 0.75em 0;
 }
 
+em {
+    font-weight: bold;
+}
+
 a {
     text-decoration: none;
     vertical-align: middle;
@@ -184,15 +188,13 @@ http://codepen.io/anon/pen/GJjZwR
 \*****************************/
 
 body > section {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+    min-height: 100vh;
 }
 /**Ribbon**/
 
 #about .ribbon {
     background: #c0392b;
-    background-image: linear-gradient(to right, #c0392b 0%, #c0392b 85%, #3498db 100%);
+    background-image: linear-gradient(to bottom, #c0392b 0%, #c0392b 85%, #3498db 100%);
 }
 
 #contact .ribbon {
@@ -205,22 +207,19 @@ body > section {
     color: #8e44ad;
 }
 
+#contact, #tips {
+    display: none;
+}
+
 .ribbon {
-    width: 100vh;
-    background: rgb(22, 160, 133);
-    height: 7em;
-    height: 7vw;
-    position: absolute;
-    left: 10em;
-    left: 10vw;
-    -moz-transform: rotate(90deg);
-    transform: rotate(90deg);
-    -moz-transform-origin: 0% 0%;
-    transform-origin: top left;
-    /*ribbon end/beginning styles:
-http://meyerweb.com/eric/tools/color-blend/
-*/
-    
+    grid-area: ribbon;
+    width: 7vw;
+
+    /* Below would add support for text going bottom up, might be more difficult to read. sideways-lr has same result, but might not be supported */
+    /* transform: rotate(180deg); */
+    writing-mode: vertical-lr;
+
+    align-self: stretch;
     line-height: 7vw;
     vertical-align: middle;
     text-align: center;
@@ -229,7 +228,7 @@ http://meyerweb.com/eric/tools/color-blend/
     font-size: 5vw;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-    font-family: 'Josefin Sans', cursive;
+    font-family: "Josefin Sans", cursive;
     font-weight: 300;
 }
 
@@ -245,7 +244,7 @@ http://meyerweb.com/eric/tools/color-blend/
     border-left: 7vh solid currentColor;
 }
 
-.ribbon.end {
+#tips .ribbon.end {
     height: 7em;
     height: 7vh;
     width: 90vw;
@@ -257,35 +256,41 @@ http://meyerweb.com/eric/tools/color-blend/
     font-size: 5vh;
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
-    color: white !important;
-    background-color: #793A93 !important;
+    color: white;
+    background-color: #793A93;
 }
 
-#about > *:not(.ribbon) {
-    display: inline-block;
-    vertical-align: middle;
+#about {
+    display: grid;
+    column-gap: 3em;
+    margin-right: 3vw;
+    grid-template-columns: 15vw 1fr 1fr;
+    grid-template-areas: "ribbon headshot descriptions";
+    justify-items: center;
+    align-items: center;
 }
 
 #about img {
-    display: inline-block;
-    height: 80vh;
-    width: 45vw;
-    /* visibility: hidden; */
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    margin-right: 3vw;
+    grid-area: headshot;
+    align-self: stretch;
+    justify-self: stretch;
+    margin: 5vh 0;
+    margin-left: -3em;
     object-fit: cover;
-    object-position: center top; 
+    object-position: center top;
 }
 
 #about section {
-    display: inline-block;
-    width: 30vw;
-    margin-right: 3vw;
+    grid-area: descriptions;
+    justify-self: stretch;
+}
+
+
+#about section h2 {
+    margin-bottom: 1rem;
 }
 
 #about section p {
-    text-indent: 1.5em;
     text-align: left;
     line-height: 1.5;
 }
@@ -306,32 +311,17 @@ http://meyerweb.com/eric/tools/color-blend/
     margin-top: 0.5em;
 }
 
-.ribbon {
-    width: 100vh;
-    background: #3498db;
-    height: 7em;
-    height: 7vw;
-    position: absolute;
-    left: 10em;
-    left: 10vw;
-    -moz-transform: rotate(90deg);
-    transform: rotate(90deg);
-    -moz-transform-origin: 0% 0%;
-    transform-origin: top left;
-    /*ribbon end/beginning styles:
-http://meyerweb.com/eric/tools/color-blend/
-*/
-    
-    line-height: 7vw;
-    vertical-align: middle;
-    text-align: center;
+
+.qual.inlined li {
+    display: inline-block;
+    background: #c0392b;
+    padding: 1em;
+    border-radius: 0.25em;
     color: white;
-    font-size: 5em;
-    font-size: 5vw;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    font-family: 'Josefin Sans', cursive;
-    font-weight: 300;
+}
+
+.qual.inlined li+li {
+    margin: none;
 }
 
 #contact section:first-of-type {
@@ -388,9 +378,7 @@ http://meyerweb.com/eric/tools/color-blend/
     vertical-align: middle;
     line-height: 14vh;
 }
-body > section .ribbon+*:not(.ribbon) {
-margin-left: 13vw;	
-}
+
 #contact section {
     vertical-align: middle;
     display: inline-block;
@@ -559,12 +547,11 @@ color: white;
 }
 
 @media only screen and (max-width: 960px), (max-height: 556px) {
-    .filter{
-        white-space: normal;
-    }
-    .cta {
+    #home {
         padding:0 2em;
-    } 
+        text-align: center;
+    }
+
     .ribbon {
         transform: rotate(0deg);
         width: 100vw;
