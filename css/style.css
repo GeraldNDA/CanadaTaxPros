@@ -44,37 +44,20 @@ header * {
     border: initial;
 }
 
-header {
+#home {
     height: 95vh;
     width: 100vw;
-    background: #000000 url("https://unsplash.imgix.net/19/clock.JPG?q=75&fm=jpg&s=c424614ae83cef32017167031925460d") no-repeat top;
-    overflow: hidden;
-}
-
-.filter {
-    height: 100%;
-    background: rgba(22, 160, 133, 0.8);
-    text-align: center;
-    white-space: nowrap;
-}
-
-.filter:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em;
-    /* Adjusts for spacing */
-}
-
-.cta {
-    display: inline-block;
-    vertical-align: middle;
+    background: 
+        linear-gradient(rgba(22, 160, 133, 0.8), rgba(22, 160, 133, 0.8)),
+        url("https://unsplash.imgix.net/19/clock.JPG?q=75&fm=jpg&s=c424614ae83cef32017167031925460d") top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-    width: 100%;
 }
 
-.cta .button {
+#home .button {
     font-family: Molengo, sans-serif;
     display: inline-block;
     color: inherit;
@@ -89,13 +72,13 @@ header {
     transition: all 0.25s ease-in-out;
 }
 
-.button:hover {
+#home .button:hover {
     background: white;
     color: #16a085;
     transition: all 0.25s ease-in-out;
 }
 
-.cta * + * {
+#home  * + * {
     margin-top: 0.5rem;
 }
 /*sticky menu*/
