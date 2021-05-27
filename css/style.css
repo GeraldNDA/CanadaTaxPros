@@ -1,3 +1,4 @@
+/** Global behaviour**/
 html {
     scroll-behavior: smooth;
 }
@@ -14,7 +15,8 @@ body {
 *:after {
     box-sizing: border-box;
 }
-/*fonts*/
+
+/** fonts **/
 
 h1 {
     font-size: 5em;
@@ -38,55 +40,10 @@ em {
 
 a {
     text-decoration: none;
-    vertical-align: middle;
-}
-/*home*/
-
-header,
-header * {
-    padding: 0;
-    border: initial;
 }
 
-#home {
-    height: 95vh;
-    width: 100vw;
-    background: 
-        linear-gradient(rgba(22, 160, 133, 0.8), rgba(22, 160, 133, 0.8)),
-        url("https://unsplash.imgix.net/19/clock.JPG?q=75&fm=jpg&s=c424614ae83cef32017167031925460d") top;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
 
-#home .button {
-    font-family: Molengo, sans-serif;
-    display: inline-block;
-    color: inherit;
-    background: none;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 0.15rem solid white;
-    padding: 3vh;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    transition: all 0.25s ease-in-out;
-}
-
-#home .button:hover {
-    background: white;
-    color: #16a085;
-    transition: all 0.25s ease-in-out;
-}
-
-#home  * + * {
-    margin-top: 0.5rem;
-}
-/*sticky menu*/
-
+/** sticky menu **/
 nav,
 nav * {
     border: none;
@@ -182,15 +139,38 @@ nav a span {
     }
 }
 
-/*****************************\
-ribbon styles
-http://codepen.io/anon/pen/GJjZwR
-\*****************************/
-
+/** Section Styles **/
 body > section {
     min-height: 100vh;
 }
-/**Ribbon**/
+
+#contact, #tips {
+    display: none;
+}
+
+/** Ribbon **/
+/* Styles: http://codepen.io/anon/pen/GJjZwR */
+
+.ribbon {
+    grid-area: ribbon;
+    display:inline-block;
+    width: 7vw;
+
+    /* Below would add support for text going bottom up, might be more difficult to read. sideways-lr has same result, but might not be supported */
+    /* transform: rotate(180deg); */
+    writing-mode: vertical-lr;
+
+    align-self: stretch;
+    line-height: 7vw;
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    font-size: 5vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-family: "Josefin Sans", cursive;
+    font-weight: 300;
+}
 
 #about .ribbon {
     background: #c0392b;
@@ -204,33 +184,8 @@ body > section {
 
 #tips .ribbon {
     background: #8e44ad;
-    color: #8e44ad;
 }
-
-#contact, #tips {
-    display: none;
-}
-
-.ribbon {
-    grid-area: ribbon;
-    width: 7vw;
-
-    /* Below would add support for text going bottom up, might be more difficult to read. sideways-lr has same result, but might not be supported */
-    /* transform: rotate(180deg); */
-    writing-mode: vertical-lr;
-
-    align-self: stretch;
-    line-height: 7vw;
-    vertical-align: middle;
-    text-align: center;
-    color: white;
-    font-size: 5em;
-    font-size: 5vw;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    font-family: "Josefin Sans", cursive;
-    font-weight: 300;
-}
+/* 
 
 #tips .ribbon:first-child {
     width: 90vh;
@@ -258,12 +213,55 @@ body > section {
     transform: rotate(0deg);
     color: white;
     background-color: #793A93;
+} */
+
+
+/** Home **/
+
+#home {
+    height: 95vh;
+    width: 100vw;
+    background: 
+        linear-gradient(rgba(22, 160, 133, 0.8), rgba(22, 160, 133, 0.8)),
+        url("https://unsplash.imgix.net/19/clock.JPG?q=75&fm=jpg&s=c424614ae83cef32017167031925460d") top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
+
+#home .button {
+    font-family: Molengo, sans-serif;
+    display: inline-block;
+    color: inherit;
+    background: none;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 0.15rem solid white;
+    padding: 3vh;
+    border-radius: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+#home .button:hover {
+    background: white;
+    color: #16a085;
+    transition: all 0.25s ease-in-out;
+}
+
+#home  * + * {
+    margin-top: 0.5rem;
+}
+
+/** About **/
+
 
 #about {
     display: grid;
     column-gap: 3em;
-    margin-right: 3vw;
+    margin-right: 3rem;
     grid-template-columns: 15vw 1fr 1fr;
     grid-template-areas: "ribbon headshot descriptions";
     justify-items: center;
@@ -323,6 +321,8 @@ body > section {
 .qual.inlined li+li {
     margin: none;
 }
+
+/** Contact **/
 
 #contact section:first-of-type {
     margin-right: 3vw;
@@ -538,7 +538,7 @@ color: white;
     width: 100%;
     height: 100%;
     transition: all 0.5s ease-in,
-                    z-index 0.3s step-end;
+    z-index 0.3s step-end;
     color: white;
     backface-visibility: hidden;
     background-color: #9b59b6;
@@ -547,21 +547,30 @@ color: white;
 }
 
 @media only screen and (max-width: 960px), (max-height: 556px) {
-    #home {
-        padding:0 2em;
-        text-align: center;
+
+    body > section {
+        height: initial;
+        margin: 0 4rem;
+        margin-bottom: 2em;
     }
 
     .ribbon {
-        transform: rotate(0deg);
         width: 100vw;
-        height: initial;
-        font-size: 7vh;
-        line-height: 9vh;
-        position: initial;
-        margin-top: 1em;
-        
+        height: 4rem;
+        writing-mode: horizontal-tb;
+        margin: 0 -4rem;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        line-height: 3rem;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        font-family: "Josefin Sans", cursive;
+        font-weight: 300;
+        font-size: 3rem;
     }
+    
 
     #about .ribbon {
         background: #c0392b;
@@ -575,7 +584,7 @@ color: white;
         background: #8e44ad;
     }
 
-    /* @TODO: Fix background colors  */
+    /* @TODO: Fix background colors 
     #tips .ribbon:first-child  {
         display: none;
     }
@@ -586,18 +595,9 @@ color: white;
         font-size: 5vh;
         line-height: 7vh;
         position: initial;
-    }
+    } */
 
-
-    body > section {
-        height: initial;
-        margin-bottom: 2em;
-    }
-    body > section .ribbon+*:not(.ribbon) {
-        margin-left: 5vw;
-    }
-
-    #about > *:not(.ribbon) {
+    /* #about > *:not(.ribbon) {
         display: block;
         margin-left: 5vw;
     }
@@ -619,7 +619,27 @@ color: white;
         text-indent: 1.5em;
         text-align: left;
         line-height: 1.5;
+    } */
+
+    #about {
+        display: grid;
+
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "ribbon" 
+            "headshot" 
+            "descriptions";
+        justify-items: center;
+        align-items: center;
+        row-gap: 1rem;
     }
+
+    #about img {
+        margin: 0;
+        width: 100%;
+    }
+
     #contact section {
     width: 90vw;
         margin: 0 5vw;
