@@ -141,11 +141,12 @@ nav a span {
 
 /** Section Styles **/
 body > section {
+    display: grid;
+    gap: 1rem 1.5em;
+    justify-items: center;
+    align-items: center;
     min-height: 100vh;
-}
-
-#contact, #tips {
-    display: none;
+    margin-right: 4rem;
 }
 
 /** Ribbon **/
@@ -164,12 +165,38 @@ body > section {
     line-height: 7vw;
     text-align: center;
     color: white;
-    font-size: 5em;
     font-size: 5vw;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     font-family: "Josefin Sans", cursive;
     font-weight: 300;
+}
+
+#tips .ribbon:not(.start) {
+    writing-mode: horizontal-tb;
+    width: calc(100% + 4vw);
+    height: 7vh;
+    font-size: 5vh;
+    line-height: 7vh;
+    align-self: center;
+    justify-self: stretch;
+    margin-left: -4vw;
+}
+
+#tips .ribbon.start {
+    grid-area: ribbon-start;
+    margin-bottom: 11vh; /* 7vh (width of bottom ribbon) + 4vh (extra bottom space) */
+}
+
+#tips .ribbon.start::after {
+    /* creates triangle after start to connect w/ rest of ribbon */
+    content: "";
+    display: block;
+    border-bottom: 7vh solid transparent;
+    border-right: 7vw solid currentColor;
+    height: 0;
+    width: 0;
+    margin-top: 100%;
 }
 
 #about .ribbon {
@@ -179,42 +206,16 @@ body > section {
 
 #contact .ribbon {
     background: #3498db;
-    background-image: linear-gradient(to right, #3498db 0%, #3498db 80%, #8e44ad 100%);
+    background-image: linear-gradient(to bottom, #3498db 0%, #3498db 80%, #8e44ad 100%);
 }
 
 #tips .ribbon {
+    background: #793a93;
+}
+#tips .ribbon.start {
     background: #8e44ad;
+    color: #8e44ad;
 }
-/* 
-
-#tips .ribbon:first-child {
-    width: 90vh;
-}
-
-#tips .ribbon:first-child::after {
-    content: "";
-    margin-left: 90vh;
-    display: block;
-    border-bottom: 7vw solid transparent;
-    border-left: 7vh solid currentColor;
-}
-
-#tips .ribbon.end {
-    height: 7em;
-    height: 7vh;
-    width: 90vw;
-    position: absolute;
-    bottom: 3em;
-    bottom: 3vh;
-    line-height: 7vh;
-    font-size: 5em;
-    font-size: 5vh;
-    -moz-transform: rotate(0deg);
-    transform: rotate(0deg);
-    color: white;
-    background-color: #793A93;
-} */
-
 
 /** Home **/
 
@@ -257,15 +258,9 @@ body > section {
 
 /** About **/
 
-
 #about {
-    display: grid;
-    column-gap: 3em;
-    margin-right: 3rem;
     grid-template-columns: 15vw 1fr 1fr;
     grid-template-areas: "ribbon headshot descriptions";
-    justify-items: center;
-    align-items: center;
 }
 
 #about img {
@@ -281,6 +276,7 @@ body > section {
 #about section {
     grid-area: descriptions;
     justify-self: stretch;
+    margin: 5vh 0;
 }
 
 
@@ -324,78 +320,65 @@ body > section {
 
 /** Contact **/
 
-#contact section:first-of-type {
-    margin-right: 3vw;
-    height: 100vh;
-    width: 30vw;
+#contact {
+    grid-template-columns: 15vw 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+        "ribbon links map"
+        "ribbon links form";
+    align-items: stretch;
+}
+
+#contact section {
+    grid-area: links;
+    align-self: center;
+    justify-self: stretch;
 }
 
 .info {
-    width: 100%;
-    display: block;
+    display: flex;
     background: #2980b9;
-    height: 20vh;
-    vertical-align: middle;
-    line-height: 20vh;
-    margin: 1em auto;
     color: inherit;
+    height: 20vh;
+    max-height:7rem;
 }
 
-.info:first-of-type {
-    margin-top: calc((100vh - (80vh + 3em))/2);
+.info  + .info {
+    margin: 1rem auto;
 }
 
 .info img {
     padding: 1em;
     background: #3498db;
     height: 100%;
-    vertical-align: top;
-    display: inline-block;
 }
 
 .info div {
-    display: inline-block;
-    line-height: 1;
-    padding: 1em;
-    vertical-align: middle;
-    width: calc(100% - 22.5vh);
-}
-
-.info h1,
-.info h2 {
-    width: 100%;
-    vertical-align: middle;
-    font-size: 2.5vh;
-    word-wrap: break-word;
+    display: inline-flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0 1rem;
 }
 
 .info h1 {
-    font-size: 5vh;
+    font-size: 3rem;
 }
 
-.info h1:only-child {
-    margin: 0;
-    vertical-align: middle;
-    line-height: 14vh;
-}
-
-#contact section {
-    vertical-align: middle;
-    display: inline-block;
-    width: 50vw;
-    overflow: hidden;
-    height: 100%;
-}
-
-.map,
-.map iframe {
-    width: 100%;
-    height: calc(100% - 1em);
+.info h2 {
+    font-size: 1.5rem;
+    word-wrap: break-word;
 }
 
 .map {
-    margin-top: 3em;
-    height: calc(50% - 1em);
+    grid-area: map;
+    align-self: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+.map iframe {
+    height: inherit;
+    width: inherit;
 }
 
 .map form {
@@ -409,23 +392,21 @@ body > section {
 }
 
 .map form * {
-height: 2.5em;
+    height: 2.5em;
 }
 
 .contact {
-    height: 39vh;
-    z-index: 2;
-    vertical-align: middle;
+    grid-area: form;
     font-size: 1.25em;
     line-height: 1.5;
-    padding: 1.5em;
-    background: rgba(255, 255, 255, 1);
+    padding: 1rem;
+    background: white;
     color: black;
     font-family: "Slabo 27px";
     overflow: visible;
-    padding-bottom: 2em;
-    overflow-y: scroll;
+    padding-bottom: 0;
 }
+
 .contact input, .contact textarea {
     background: none;
     border: none;
@@ -437,29 +418,30 @@ height: 2.5em;
     border-bottom: 2px solid #2980b9;
     width: 50%;
 }
+
 .contact textarea
 {
-margin-top: 0.5em;
-border: 1px solid #2980b9;
-width: 100%;
-overflow: auto;
-resize: none;
-font-size: inherit;
+    margin-top: 0.5em;
+    border: 1px solid #2980b9;
+    width: 100%;
+    overflow: auto;
+    resize: none;
+    font-size: inherit;
 }
+
 .contact input:focus
 {
-background-color: #2980b9;
-color: white;
-
+    background-color: #2980b9;
+    color: white;
 }
 
-.contact input:focus::-moz-placeholder
+.contact input:focus::placeholder
 {
     color: white;
     opacity: 1;
 }
 
-.contact input::-moz-placeholder
+.contact input::placeholder
 {
     text-align: center;
     opacity: 1;
@@ -467,7 +449,8 @@ color: white;
     font-weight: 400;
     color: #2980b9;
 }
-.contact textarea::-moz-placeholder
+
+.contact textarea::placeholder
 {
     opacity: 1;
     font-family: "Slabo 27px";
@@ -489,38 +472,56 @@ color: white;
     background: #2980b9;
 }
 
-.cardRow {
-    margin-left: 13vw;
-    margin-top: 3vh;
+/** Tips **/
+#tips {
+    column-gap: 0;
+    grid-template-columns: 15vw 1fr 1fr;
+    grid-template-rows: 1fr 1fr 15vh;
+    grid-template-areas: 
+        "ribbon-start cards cards"
+        "ribbon-start cards cards"
+        "ribbon-start ribbon ribbon";
+    margin-right: 0;
 }
+.card-area {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 4rem 4rem 0 0;
+    justify-content: stretch;
+    align-content: stretch;
+    justify-self: stretch;
+    align-self: stretch;
 
-.card + .card {
-    margin-left: 3vw;
 }
 
 .card {
     display: inline-block;
     position: relative;
     transform-style: preserve-3d;
-    height: 40.5vh;
-    width: 40.5vw;
     perspective: 500px;
 }
+
 
 .card .front {
     z-index: 2;
     vertical-align: middle;
-    line-height: 40.5vh;
     text-align: center;
-    font-size: 5vh;
+    font-size: 3rem;
     font-family: Molengo;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card .back {
     z-index: 1;
     line-height: 1.15;
     transform: rotateY(180deg);
-    padding: 7.5%;
+    padding: 1.5rem;
 }
 
 .card:hover .front {
@@ -546,7 +547,23 @@ color: white;
     overflow: hidden;
 }
 
+@media (hover:none) {
+    /* Flip cards by default if hover not possible */
+    /* on mobile, tap-to-hover, exists, will not flip back unless tap elsewhere */
+    .card .front {
+        transform: rotateY(-180deg);
+        z-index: 0;
+    }
+    
+    .card .back {
+        transform: rotateY(0deg)
+    }
+}
+
 @media only screen and (max-width: 960px), (max-height: 556px) {
+    .no-mobile {
+        display: none;
+    }
 
     body > section {
         height: initial;
@@ -554,7 +571,7 @@ color: white;
         margin-bottom: 2em;
     }
 
-    .ribbon {
+    .ribbon, #tips .ribbon:not(.start) {
         width: 100vw;
         height: 4rem;
         writing-mode: horizontal-tb;
@@ -570,6 +587,10 @@ color: white;
         font-weight: 300;
         font-size: 3rem;
     }
+
+    .ribbon.start {
+        display: none;
+    }
     
 
     #about .ribbon {
@@ -584,110 +605,53 @@ color: white;
         background: #8e44ad;
     }
 
-    /* @TODO: Fix background colors 
-    #tips .ribbon:first-child  {
-        display: none;
-    }
-    #tips .ribbon {
-        transform: rotate(0deg);
-        width: 100vw;
-        height: auto;
-        font-size: 5vh;
-        line-height: 7vh;
-        position: initial;
-    } */
-
-    /* #about > *:not(.ribbon) {
-        display: block;
-        margin-left: 5vw;
-    }
-
-    #about img {
-        display: inline-block;
-        height: 80vh;
-        width: 90vw;
-        object-position: center top;
-        object-fit: cover;
-    }
-
-    #about section {
-        width: 90vw;
-        margin-right: 3vw;
-    }
-
-    #about section p {
-        text-indent: 1.5em;
-        text-align: left;
-        line-height: 1.5;
-    } */
-
     #about {
-        display: grid;
-
         grid-template-rows: auto;
         grid-template-columns: auto;
         grid-template-areas: 
-            "ribbon" 
-            "headshot" 
-            "descriptions";
-        justify-items: center;
-        align-items: center;
-        row-gap: 1rem;
+        "ribbon" 
+        "headshot" 
+        "descriptions";
     }
-
+    
     #about img {
         margin: 0;
         width: 100%;
     }
-
-    #contact section {
-    width: 90vw;
-        margin: 0 5vw;
+    
+    #contact {
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "ribbon" 
+            "links" 
+            "map"
+            "form";
     }
 
-    #contact section:first-of-type {
-        margin: 0 5vw;
-        width: 90vw;
-        height: auto;
-    }
-    .map {
-        margin-top: 1em;
-        height: 100vh;
-    }
-    .contact {
-        height: auto;
-        font-size: 24px;
+    /* TODO: Handle contact links on very small vw */
+    #contact .map {
+        height: 80vh;
     }
 
-
-    .cardRow {
-        margin-left: 5vw;
+    #tips {
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "ribbon" 
+            "cards";
+        margin-right: 4rem;
     }
+
+    .card-area {
+        margin: 0;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
     .card {
-        display: inline-block;
-        position: relative;
-        transform-style: preserve-3d;
-        height: 45vh;
-        width: 90vw;
-        line-height: 90vh;
-        perspective: 500px;
-    }
-    .card + .card {
-        margin-left: 0;
-        margin-top: 3vh;
+        height: 50vh;
     }
 }
-/****************************\
-=========== TODO =============
-- Fix About Section Formatting
-- Change "What Choose us"
-    and "What We Do" to be icon
-    based
-- Fix map (to be mobile scroll
-            friendly)
-- Fix Contact Form All Round
-
-\****************************/
-
 
 

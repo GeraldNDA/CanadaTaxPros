@@ -57,7 +57,7 @@
             <ul class="qual inlined">
                 <li>Personal and organizational integrity</li>
                 <li>Up to date knowledge</li>
-                <li>Utilizing the latest technology and software</li>
+                <li>Latest technology and software</li>
                 <li>Focus on the customer</li>
                 <li>Guaranteed accuracy for life</li>
             </ul>
@@ -96,54 +96,49 @@
                 </div>
             </a>
         </section>
-        <section>
             <!--http://www.online-tech-tips.com/google-softwaretips/add-google-maps-driving-directions-to-your-website/-->
             <!--No submit button ... .onchange() .submit() placeholder = "type your address tThen Press Enter"-->
 
-            <div class="map">
-                <iframe src="https://mapsengine.google.com/map/embed?mid=zFsaEP2dXofM.krcljogndSzs" height="480" width="640"></iframe>
-                <form action="https://maps.google.com/maps" method="get" target="_blank">
-                    <input placeholder="Your Address ... " name="saddr" type="text">
-                    <input name="daddr" value="22 Gulliver Crescent, Brampton, Ontario" type="hidden">
-                    <input value="Get Directions" type="submit">
-                </form>
-            </div>
-            <form class="contact" action="mailto:aryeeteygeraldine@rogers.com">
-                <span class="filler">Hi, my</span>
-                <label for="name"> name </label><span class="filler">is </span>
-                <input id="name" placeholder="[ Your Name ]" type="text">
-                <span class="filler">and you can </span>
-                <label for="email"> email </label><span class="filler">me back at</span>
-                <input id="email" placeholder="[ Your Email ]" type="email">
-
-                <span class="filler">I'd just like to send you a </span>
-                <label for="message">message </label>
-                <span class="filler"> about ...</span>
-                <textarea rows="5" id="message" placeholder="[ Any message ... ]" wrap="soft"></textarea>
-                <input value="Send" type="submit">
+        <div class="map">
+            <iframe src="https://mapsengine.google.com/map/embed?mid=zFsaEP2dXofM.krcljogndSzs" height="480" width="640"></iframe>
+            <form action="https://maps.google.com/maps" method="get" target="_blank">
+                <input placeholder="Your Address ... " name="saddr" type="text">
+                <input name="daddr" value="22 Gulliver Crescent, Brampton, Ontario" type="hidden">
+                <input value="Get Directions" type="submit">
             </form>
-        </section>
+        </div>
+        <form class="contact" action="mailto:aryeeteygeraldine@rogers.com">
+            <span class="filler">Hi, my</span>
+            <label for="name"> name </label><span class="filler">is </span>
+            <input id="name" placeholder="[ Your Name ]" type="text">
+            <span class="filler">and you can </span>
+            <label for="email"> email </label><span class="filler">me back at</span>
+            <input id="email" placeholder="[ Your Email ]" type="email">
+
+            <span class="filler">I'd just like to send you a </span>
+            <label for="message">message </label>
+            <span class="filler"> about ...</span>
+            <textarea rows="5" id="message" placeholder="[ Any message ... ]" wrap="soft"></textarea>
+            <input value="Send" type="submit">
+        </form>
     </section>
 
     <!--Tax Tips-->
     <!--Flip Cards: http://www.codicode.com/art/3d_flipping_cards_pure_css3_card_flip_plugin.aspx-->
     <section id="tips">
-        <div class="ribbon">
-            <!--select last of type and make shorter-->
-        </div>
-        <div class="ribbon end">Free Tax Tips
-            <!--horizantal, bottom of page ::before add triangle shape of ribbon-->
-        </div>
-        <section class="cardRow">
+        <!-- -->
+        <div class="ribbon start"></div>
+        <div class="ribbon"><div class="no-mobile">Free</div> Tax Tips</div>
+        <div class="card-area">
+
             <div class="card">
                 <figure class="front">Claim Those Too!</figure>
                 <figure class="back">
                     <h2>Buy Transit Passes?</h2>
                     <p>If it covers at least 28 consecutive days you can claim 15% of the value. There's is no limit on how much can be claimed.</p>
-
+    
                     <h2>Need a Babysitter?</h2>
-                    <!-- Fix wording -->
-                    <p>Write off your child care expenses for a night out for work, school or entertaining clients.</p>
+                    <p>Write off your child care expenses for a night out whether you were working, studying or entertaining clients.</p>
                 </figure>
             </div>
             <div class="card">
@@ -153,8 +148,6 @@
                     <p>To get your capital gains taxed at the lowest rate possible, have you lower income earning spouse do all the investing.</p>
                 </figure>
             </div>
-        </section>
-        <section class="cardRow">
             <div class="card">
                 <figure class="front">Free Tax Tip</figure>
                 <figure class="back">
@@ -169,7 +162,7 @@
                     <p>If it's your first time donating to charity since 2007, you can claim the first-time donor super-credit and get an extra 25%. It's available only until 2017, the donation must be in cash and only the first $1,000 qualifies.</p>
                 </figure>
             </div>
-        </section>
+        </div>
     </section>
 
 </body>
